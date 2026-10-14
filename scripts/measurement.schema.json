@@ -1,0 +1,832 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://edgelab.local/schemas/measurement-v1.json",
+  "title": "EdgeLab benchmark phase record",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "record_type": {
+      "const": "collection_failure"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "experiment": {
+      "type": "string",
+      "minLength": 1
+    },
+    "configuration_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "phase": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        null,
+        "warmup",
+        "measured"
+      ]
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "failure_stage": {
+      "enum": [
+        "preflight",
+        "initial_stats",
+        "warmup_phase",
+        "warmup_post_stats",
+        "stats_reset",
+        "measured_pre_stats",
+        "measured_phase",
+        "measured_post_stats"
+      ]
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "message"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "process_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proxy",
+        "upstream",
+        "benchmark"
+      ],
+      "properties": {
+        "proxy": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "upstream": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "benchmark": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
+      }
+    },
+    "benchmark_command": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "executable",
+        "arguments"
+      ],
+      "properties": {
+        "executable": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "windows_command_line": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "elapsed_seconds",
+        "elapsed_nanoseconds",
+        "benchmark",
+        "processes",
+        "proxy_connections",
+        "upstream_activity"
+      ],
+      "properties": {
+        "elapsed_seconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "elapsed_nanoseconds": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "benchmark": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "processes": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "proxy_connections": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "upstream_activity": {
+          "type": [
+            "object",
+            "null"
+          ]
+        }
+      }
+    },
+    "stdout_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stderr_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "timestamp_start_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "timestamp_end_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "exact_command": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "executable",
+        "arguments",
+        "windows_command_line"
+      ],
+      "properties": {
+        "executable": {
+          "type": "string",
+          "minLength": 1
+        },
+        "arguments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "windows_command_line": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "server_processes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proxy",
+        "upstream"
+      ],
+      "properties": {
+        "proxy": {
+          "$ref": "#/$defs/server_process"
+        },
+        "upstream": {
+          "$ref": "#/$defs/server_process"
+        }
+      }
+    },
+    "binary_sha256": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "benchmark_sha256",
+        "proxy_sha256",
+        "upstream_sha256"
+      ],
+      "properties": {
+        "benchmark_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "proxy_sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "upstream_sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "exit_code": {
+      "type": "integer"
+    },
+    "timed_out": {
+      "type": "boolean"
+    },
+    "elapsed_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "elapsed_nanoseconds": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "percentile_convention": {
+      "const": "floor((N - 1) * p), zero-based index"
+    },
+    "benchmark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requests",
+        "effective_workers",
+        "throughput_requests_per_second",
+        "successes",
+        "unique_failed_requests",
+        "client_transport_errors",
+        "body_read_or_close_errors",
+        "http_status_errors",
+        "p50_ns",
+        "p95_ns",
+        "p99_ns",
+        "benchmark_elapsed_ns"
+      ],
+      "properties": {
+        "requests": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "effective_workers": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "throughput_requests_per_second": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "successes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "unique_failed_requests": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "client_transport_errors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "body_read_or_close_errors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "http_status_errors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "p50_ns": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "p95_ns": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "p99_ns": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "benchmark_elapsed_ns": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "processes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proxy",
+        "upstream",
+        "benchmark"
+      ],
+      "properties": {
+        "proxy": {
+          "$ref": "#/$defs/processMeasurement"
+        },
+        "upstream": {
+          "$ref": "#/$defs/processMeasurement"
+        },
+        "benchmark": {
+          "$ref": "#/$defs/processMeasurement"
+        }
+      }
+    },
+    "proxy_connections": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "accepted_total_before",
+        "accepted_total_after",
+        "accepted_delta",
+        "open_before",
+        "open_after",
+        "peak_open_including_persistent_stats_observer",
+        "peak_open_above_baseline",
+        "requests_received",
+        "proxy_errors",
+        "timeout_errors",
+        "other_upstream_errors",
+        "response_processing_errors"
+      ],
+      "properties": {
+        "accepted_total_before": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "accepted_total_after": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "accepted_delta": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "open_before": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "open_after": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "peak_open_including_persistent_stats_observer": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "peak_open_above_baseline": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "requests_received": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "proxy_errors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "timeout_errors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "other_upstream_errors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "response_processing_errors": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "upstream_activity": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "accepted_connections_before",
+        "accepted_connections_after",
+        "accepted_connections_delta",
+        "active_delay_requests_after",
+        "peak_delay_requests",
+        "active_payload_requests_after",
+        "peak_payload_requests"
+      ],
+      "properties": {
+        "accepted_connections_before": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "accepted_connections_after": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "accepted_connections_delta": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "active_delay_requests_after": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "peak_delay_requests": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "active_payload_requests_after": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "peak_payload_requests": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "windows_caption",
+        "windows_version",
+        "windows_build",
+        "cpu_model",
+        "logical_processors",
+        "physical_cores",
+        "physical_memory_bytes",
+        "powershell_version",
+        "go_version"
+      ],
+      "properties": {
+        "windows_caption": {
+          "type": "string"
+        },
+        "windows_version": {
+          "type": "string"
+        },
+        "windows_build": {
+          "type": "string"
+        },
+        "cpu_model": {
+          "type": "string"
+        },
+        "logical_processors": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "physical_cores": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "physical_memory_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "powershell_version": {
+          "type": "string"
+        },
+        "go_version": {
+          "type": "string"
+        }
+      }
+    },
+    "stdout_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "stderr_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "cpu_measurement_scope": {
+      "type": "string"
+    },
+    "benchmark_peak_working_set_last_sample_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "benchmark_peak_working_set_poll_interval_ms": {
+      "const": 10
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "record_type"
+        ],
+        "properties": {
+          "record_type": {
+            "const": "collection_failure"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "record_type",
+          "run_id",
+          "experiment",
+          "configuration_id",
+          "timestamp_utc",
+          "phase",
+          "failure_stage",
+          "error",
+          "process_ids",
+          "server_processes",
+          "binary_sha256",
+          "benchmark_command",
+          "metrics",
+          "stdout_path",
+          "stderr_path"
+        ]
+      },
+      "else": {
+        "required": [
+          "schema_version",
+          "run_id",
+          "experiment",
+          "configuration_id",
+          "phase",
+          "timestamp_start_utc",
+          "timestamp_end_utc",
+          "exact_command",
+          "server_processes",
+          "binary_sha256",
+          "exit_code",
+          "timed_out",
+          "elapsed_seconds",
+          "elapsed_nanoseconds",
+          "percentile_convention",
+          "benchmark",
+          "processes",
+          "proxy_connections",
+          "upstream_activity",
+          "environment",
+          "stdout_path",
+          "stderr_path",
+          "cpu_measurement_scope",
+          "benchmark_peak_working_set_last_sample_utc",
+          "benchmark_peak_working_set_poll_interval_ms"
+        ],
+        "properties": {
+          "phase": {
+            "enum": [
+              "warmup",
+              "measured"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "server_process": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pid",
+        "executable",
+        "command_line"
+      ],
+      "properties": {
+        "pid": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "executable": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "command_line": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "processMeasurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pid",
+        "cpu_seconds_before",
+        "cpu_seconds_after",
+        "cpu_delta_seconds",
+        "wall_seconds",
+        "cpu_one_core_percent",
+        "cpu_machine_percent_normalized",
+        "working_set_before_bytes",
+        "working_set_observed_bytes",
+        "working_set_observation_scope",
+        "os_peak_working_set_bytes_process_lifetime",
+        "peak_scope"
+      ],
+      "properties": {
+        "pid": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "cpu_seconds_before": {
+          "type": "number",
+          "minimum": 0
+        },
+        "cpu_seconds_after": {
+          "type": "number",
+          "minimum": 0
+        },
+        "cpu_delta_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "wall_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "cpu_one_core_percent": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "cpu_machine_percent_normalized": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "working_set_before_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "working_set_observed_bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "working_set_observation_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "os_peak_working_set_bytes_process_lifetime": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "peak_scope": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

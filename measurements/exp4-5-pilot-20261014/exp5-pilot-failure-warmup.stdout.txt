@@ -1,0 +1,27 @@
+URL:                       http://127.0.0.1:18180/hello
+Requests:                  5
+Concurrency:               5
+Client timeout:            5s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      1000
+Max idle connections/host: 100
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  13.7654ms
+Throughput:                363.23 req/s
+Successful:                0
+Errors:                    5
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        5
+p50 latency:               11.4029ms
+p95 latency:               12.584ms
+p99 latency:               12.584ms

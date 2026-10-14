@@ -1,0 +1,27 @@
+URL:                       http://127.0.0.1:18180/payload/64k
+Requests:                  200
+Concurrency:               5
+Client timeout:            5s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      1000
+Max idle connections/host: 100
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  74.4354ms
+Throughput:                2686.89 req/s
+Successful:                200
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.6248ms
+p95 latency:               3.8805ms
+p99 latency:               6.6406ms

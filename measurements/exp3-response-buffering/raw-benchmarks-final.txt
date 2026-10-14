@@ -1,0 +1,1921 @@
+Experiment 3 raw benchmark outputs (final dataset; warm-up n=8 c=4)
+
+=== WARMUP 64k stream rep=1 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  16.4078ms
+Throughput:                487.57 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.0637ms
+p95 latency:               15.3441ms
+p99 latency:               15.3441ms
+
+=== 64k stream rep=1 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  21.961ms
+Throughput:                455.35 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               3.0176ms
+p95 latency:               16.5719ms
+p99 latency:               16.5719ms
+UPSTREAM_STATS 64k stream rep=1
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k buffer1m rep=1 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  31.0213ms
+Throughput:                257.89 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.9606ms
+p95 latency:               27.8476ms
+p99 latency:               27.8476ms
+
+=== 64k buffer1m rep=1 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  21.346ms
+Throughput:                468.47 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.6432ms
+p95 latency:               17.9004ms
+p99 latency:               17.9004ms
+UPSTREAM_STATS 64k buffer1m rep=1
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 3
+
+=== WARMUP 64k buffer1m rep=2 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  16.2233ms
+Throughput:                493.12 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.6559ms
+p95 latency:               15.119ms
+p99 latency:               15.119ms
+
+=== 64k buffer1m rep=2 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  12.1876ms
+Throughput:                820.51 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.0877ms
+p95 latency:               10.5769ms
+p99 latency:               10.5769ms
+UPSTREAM_STATS 64k buffer1m rep=2
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k stream rep=2 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  15.442ms
+Throughput:                518.07 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.117ms
+p95 latency:               14.325ms
+p99 latency:               14.325ms
+
+=== 64k stream rep=2 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  17.1954ms
+Throughput:                581.55 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               2.6636ms
+p95 latency:               13.4089ms
+p99 latency:               13.4089ms
+UPSTREAM_STATS 64k stream rep=2
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k stream rep=3 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  14.2626ms
+Throughput:                560.91 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               535.2탎
+p95 latency:               13.7274ms
+p99 latency:               13.7274ms
+
+=== 64k stream rep=3 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  13.1717ms
+Throughput:                759.20 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               539.3탎
+p95 latency:               12.0999ms
+p99 latency:               12.0999ms
+UPSTREAM_STATS 64k stream rep=3
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 3
+
+=== WARMUP 64k buffer1m rep=3 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  14.8509ms
+Throughput:                538.69 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               3.1805ms
+p95 latency:               11.6704ms
+p99 latency:               11.6704ms
+
+=== 64k buffer1m rep=3 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  20.6871ms
+Throughput:                483.39 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               2.6099ms
+p95 latency:               16.7558ms
+p99 latency:               16.7558ms
+UPSTREAM_STATS 64k buffer1m rep=3
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 3
+
+=== WARMUP 64k buffer1m rep=4 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  18.4763ms
+Throughput:                432.99 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               2.2151ms
+p95 latency:               15.6964ms
+p99 latency:               15.6964ms
+
+=== 64k buffer1m rep=4 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  12.7348ms
+Throughput:                785.25 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.6326ms
+p95 latency:               10.5674ms
+p99 latency:               10.5674ms
+UPSTREAM_STATS 64k buffer1m rep=4
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k stream rep=4 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  15.8024ms
+Throughput:                506.25 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.0929ms
+p95 latency:               14.7095ms
+p99 latency:               14.7095ms
+
+=== 64k stream rep=4 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  12.3991ms
+Throughput:                806.51 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.0967ms
+p95 latency:               10.2044ms
+p99 latency:               10.2044ms
+UPSTREAM_STATS 64k stream rep=4
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k stream rep=5 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  17.5234ms
+Throughput:                456.53 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.705ms
+p95 latency:               15.2743ms
+p99 latency:               15.2743ms
+
+=== 64k stream rep=5 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  19.4671ms
+Throughput:                513.69 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               1.8076ms
+p95 latency:               16.0565ms
+p99 latency:               16.0565ms
+UPSTREAM_STATS 64k stream rep=5
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k buffer1m rep=5 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  19.7645ms
+Throughput:                404.77 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               2.6376ms
+p95 latency:               16.6223ms
+p99 latency:               16.6223ms
+
+=== 64k buffer1m rep=5 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  21.5535ms
+Throughput:                463.96 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               2.3877ms
+p95 latency:               18.0891ms
+p99 latency:               18.0891ms
+UPSTREAM_STATS 64k buffer1m rep=5
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m stream rep=1 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  54.1682ms
+Throughput:                147.69 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               17.728ms
+p95 latency:               37.955ms
+p99 latency:               37.955ms
+
+=== 4m stream rep=1 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  60.6006ms
+Throughput:                165.01 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               13.187ms
+p95 latency:               27.7297ms
+p99 latency:               27.7297ms
+UPSTREAM_STATS 4m stream rep=1
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m buffer1m rep=1 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  55.6596ms
+Throughput:                143.73 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               21.2932ms
+p95 latency:               36.3284ms
+p99 latency:               36.3284ms
+
+=== 4m buffer1m rep=1 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  55.1185ms
+Throughput:                181.43 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               17.1891ms
+p95 latency:               27.18ms
+p99 latency:               27.18ms
+UPSTREAM_STATS 4m buffer1m rep=1
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m buffer1m rep=2 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  50.6135ms
+Throughput:                158.06 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               18.2364ms
+p95 latency:               32.3771ms
+p99 latency:               32.3771ms
+
+=== 4m buffer1m rep=2 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  68.5858ms
+Throughput:                145.80 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               20.2652ms
+p95 latency:               31.299ms
+p99 latency:               31.299ms
+UPSTREAM_STATS 4m buffer1m rep=2
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m stream rep=2 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  39.2289ms
+Throughput:                203.93 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               14.9435ms
+p95 latency:               24.2854ms
+p99 latency:               24.2854ms
+
+=== 4m stream rep=2 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  75.2469ms
+Throughput:                132.90 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               23.284ms
+p95 latency:               42.6738ms
+p99 latency:               42.6738ms
+UPSTREAM_STATS 4m stream rep=2
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m stream rep=3 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  45.1825ms
+Throughput:                177.06 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               18.6545ms
+p95 latency:               30.7125ms
+p99 latency:               30.7125ms
+
+=== 4m stream rep=3 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  42.3884ms
+Throughput:                235.91 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               11.4481ms
+p95 latency:               23.5097ms
+p99 latency:               23.5097ms
+UPSTREAM_STATS 4m stream rep=3
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m buffer1m rep=3 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  46.7597ms
+Throughput:                171.09 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               16.0737ms
+p95 latency:               30.8485ms
+p99 latency:               30.8485ms
+
+=== 4m buffer1m rep=3 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  50.5752ms
+Throughput:                197.73 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               15.3572ms
+p95 latency:               27.7497ms
+p99 latency:               27.7497ms
+UPSTREAM_STATS 4m buffer1m rep=3
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m buffer1m rep=4 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  65.1517ms
+Throughput:                122.79 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               20.932ms
+p95 latency:               48.3232ms
+p99 latency:               48.3232ms
+
+=== 4m buffer1m rep=4 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  67.2572ms
+Throughput:                148.68 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               19.8912ms
+p95 latency:               32.6628ms
+p99 latency:               32.6628ms
+UPSTREAM_STATS 4m buffer1m rep=4
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m stream rep=4 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  40.7477ms
+Throughput:                196.33 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               12.7442ms
+p95 latency:               28.0035ms
+p99 latency:               28.0035ms
+
+=== 4m stream rep=4 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  74.8475ms
+Throughput:                133.60 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               17.4465ms
+p95 latency:               31.0201ms
+p99 latency:               31.0201ms
+UPSTREAM_STATS 4m stream rep=4
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m stream rep=5 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  43.1001ms
+Throughput:                185.61 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               13.4229ms
+p95 latency:               29.6772ms
+p99 latency:               29.6772ms
+
+=== 4m stream rep=5 ===
+URL:                       http://localhost:18091/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  43.8725ms
+Throughput:                227.93 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               15.6576ms
+p95 latency:               23.5018ms
+p99 latency:               23.5018ms
+UPSTREAM_STATS 4m stream rep=5
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 4m buffer1m rep=5 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  55.0608ms
+Throughput:                145.29 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               17.8954ms
+p95 latency:               39.3392ms
+p99 latency:               39.3392ms
+
+=== 4m buffer1m rep=5 ===
+URL:                       http://localhost:18092/payload/4m
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  76.0146ms
+Throughput:                131.55 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               17.0118ms
+p95 latency:               49.4855ms
+p99 latency:               49.4855ms
+UPSTREAM_STATS 4m buffer1m rep=5
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k-slow-reader stream rep=1 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  94.9878ms
+Throughput:                84.22 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               41.0508ms
+p95 latency:               53.937ms
+p99 latency:               53.937ms
+
+=== 64k-slow-reader stream rep=1 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  159.7639ms
+Throughput:                62.59 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               46.8842ms
+p95 latency:               66.8838ms
+p99 latency:               66.8838ms
+UPSTREAM_STATS 64k-slow-reader stream rep=1
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k-slow-reader buffer1m rep=1 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  113.3385ms
+Throughput:                70.59 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               52.9418ms
+p95 latency:               60.3967ms
+p99 latency:               60.3967ms
+
+=== 64k-slow-reader buffer1m rep=1 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  151.0041ms
+Throughput:                66.22 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               50.4938ms
+p95 latency:               57.0217ms
+p99 latency:               57.0217ms
+UPSTREAM_STATS 64k-slow-reader buffer1m rep=1
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 3
+
+=== WARMUP 64k-slow-reader buffer1m rep=2 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  106.081ms
+Throughput:                75.41 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               37.7033ms
+p95 latency:               67.6415ms
+p99 latency:               67.6415ms
+
+=== 64k-slow-reader buffer1m rep=2 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  141.7284ms
+Throughput:                70.56 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               45.7127ms
+p95 latency:               52.7909ms
+p99 latency:               52.7909ms
+UPSTREAM_STATS 64k-slow-reader buffer1m rep=2
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 3
+
+=== WARMUP 64k-slow-reader stream rep=2 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  102.6114ms
+Throughput:                77.96 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               45.4871ms
+p95 latency:               57.1243ms
+p99 latency:               57.1243ms
+
+=== 64k-slow-reader stream rep=2 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  158.6986ms
+Throughput:                63.01 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               52.7414ms
+p95 latency:               56.951ms
+p99 latency:               56.951ms
+UPSTREAM_STATS 64k-slow-reader stream rep=2
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k-slow-reader stream rep=3 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  101.4238ms
+Throughput:                78.88 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               46.4059ms
+p95 latency:               54.3842ms
+p99 latency:               54.3842ms
+
+=== 64k-slow-reader stream rep=3 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  149.4643ms
+Throughput:                66.91 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               48.7634ms
+p95 latency:               56.103ms
+p99 latency:               56.103ms
+UPSTREAM_STATS 64k-slow-reader stream rep=3
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k-slow-reader buffer1m rep=3 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  95.571ms
+Throughput:                83.71 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               46.1223ms
+p95 latency:               49.4487ms
+p99 latency:               49.4487ms
+
+=== 64k-slow-reader buffer1m rep=3 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  141.0913ms
+Throughput:                70.88 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               45.2819ms
+p95 latency:               54.9528ms
+p99 latency:               54.9528ms
+UPSTREAM_STATS 64k-slow-reader buffer1m rep=3
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k-slow-reader buffer1m rep=4 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  100.6277ms
+Throughput:                79.50 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               40.3015ms
+p95 latency:               59.8093ms
+p99 latency:               59.8093ms
+
+=== 64k-slow-reader buffer1m rep=4 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  148.3997ms
+Throughput:                67.39 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               41.6536ms
+p95 latency:               69.8637ms
+p99 latency:               69.8637ms
+UPSTREAM_STATS 64k-slow-reader buffer1m rep=4
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k-slow-reader stream rep=4 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  104.1408ms
+Throughput:                76.82 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               44.179ms
+p95 latency:               59.2741ms
+p99 latency:               59.2741ms
+
+=== 64k-slow-reader stream rep=4 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  142.5016ms
+Throughput:                70.17 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               44.0593ms
+p95 latency:               56.7325ms
+p99 latency:               56.7325ms
+UPSTREAM_STATS 64k-slow-reader stream rep=4
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k-slow-reader stream rep=5 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  95.7315ms
+Throughput:                83.57 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               40.8105ms
+p95 latency:               54.921ms
+p99 latency:               54.921ms
+
+=== 64k-slow-reader stream rep=5 ===
+URL:                       http://localhost:18091/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  142.6418ms
+Throughput:                70.11 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               46.9886ms
+p95 latency:               52.0296ms
+p99 latency:               52.0296ms
+UPSTREAM_STATS 64k-slow-reader stream rep=5
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4
+
+=== WARMUP 64k-slow-reader buffer1m rep=5 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  8
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  103.1649ms
+Throughput:                77.55 req/s
+Successful:                8
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               46.5901ms
+p95 latency:               56.5748ms
+p99 latency:               56.5748ms
+
+=== 64k-slow-reader buffer1m rep=5 ===
+URL:                       http://localhost:18092/payload/64k
+Requests:                  10
+Concurrency:               4
+Client timeout:            15s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      100
+Max idle connections/host: 2
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       250탎
+Duration:                  150.3453ms
+Throughput:                66.51 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               50.2775ms
+p95 latency:               56.8481ms
+p99 latency:               56.8481ms
+UPSTREAM_STATS 64k-slow-reader buffer1m rep=5
+accepted_connections 1
+active_delay_requests 0
+peak_delay_requests 0
+active_payload_requests 0
+peak_payload_requests 4

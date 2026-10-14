@@ -1,0 +1,2 @@
+2026/10/12 18:29:41 EdgeLab proxy listening on :18081 -> http://localhost:19091 (upstream keep-alives=true)
+2026/10/12 18:29:41 listen tcp :18081: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.

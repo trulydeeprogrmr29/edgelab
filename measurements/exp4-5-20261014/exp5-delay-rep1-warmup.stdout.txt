@@ -1,0 +1,27 @@
+URL:                       http://127.0.0.1:18180/delay?ms=200
+Requests:                  10
+Concurrency:               10
+Client timeout:            5s
+Proxy setting:             environment
+Force HTTP/2:              true
+Max idle connections:      1000
+Max idle connections/host: 100
+Max connections/host:      unlimited
+Idle connection timeout:   1m30s
+Dial timeout:              30s
+TCP keep-alive:            30s
+TLS handshake timeout:     10s
+Response header timeout:   0s
+Expect-continue timeout:   1s
+Response read chunk size:  1024
+Response read delay:       0s
+Duration:                  216.0237ms
+Throughput:                46.29 req/s
+Successful:                10
+Errors:                    0
+Client request errors:     0
+Body read/close errors:    0
+HTTP status errors:        0
+p50 latency:               215.5094ms
+p95 latency:               215.5094ms
+p99 latency:               215.5094ms
